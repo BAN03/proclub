@@ -1,2 +1,2 @@
-# proclub
+# PROCLUB
 Programing Club codes
