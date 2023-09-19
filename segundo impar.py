@@ -1,8 +1,3 @@
-"""
-ordenar de manera acendente una lista de numeros y
-encontrar el segundo valor impar en la lista 
-"""
-
 contador = 0
 numeros = input()
 numeros = sorted([int(x) for x in numeros.split()])
