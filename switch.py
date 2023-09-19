@@ -2,7 +2,7 @@ def switch(N, M):
     salida = [0 for i in range(N)]
     i = 2
     while i <= M:
-        for j in range(N):
+        for j in range(N+1):
             if not j == 0:
                 if j % i == 0:
                     if salida[j-1] == 0:
