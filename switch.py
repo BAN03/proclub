@@ -1,29 +1,18 @@
-"""
-El foco se prendera o apagara cuando pase por su switch
-
-M debe ser menor a N, y al hacer los switch deben iniciar desde 2 hasta M:
-
-Digamos por ejemplo, que el numero M introducido es 3
-Primero comienza en 2, donde cada foco multiplo de 2 debera hacer switch
-Despues avanza a 3, y cada foco multiplo de 3 debera hacer switch
-
-if 0:
-    switch a 1
-if 1:
-    switch a 0
-
-6 focos = N
-3 switch = M
-
-instancia 1 de numero 2:
-    0 1 0 1 0 1
-instancia 2 de numero 3:
-    0 1 1 1 0 0
-"""
-
 def switch(N, M):
     salida = [0 for i in range(N)]
-    
+    i = 2
+    while i <= M:
+        for j in range(N+1):
+            if j % i == 0:
+                if salida[j-1] == 0:
+                    salida[j-1] = 1
+                else:
+                    salida[j-1] = 0
+            
+        i += 1
+
+    return salida
+
 
 if __name__ == '__main__':
     N = int(input())
@@ -38,4 +27,4 @@ if __name__ == '__main__':
         print("El segundo numero debe ser menor al primero")
         exit()
         
-    switch(N, M)
+    print(switch(N, M))
