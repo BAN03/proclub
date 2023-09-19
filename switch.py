@@ -8,11 +8,8 @@ def switch(N, M):
                     salida[j-1] = 1
                 else:
                     salida[j-1] = 0
-            
         i += 1
-
     return salida
-
 
 if __name__ == '__main__':
     N = int(input())
